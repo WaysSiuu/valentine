@@ -230,3 +230,14 @@ button:hover {
         padding: 0 20px;
     }
 }
+
+.div-secret {
+    padding-top: 250px;
+
+}
+
+.div-secret a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
