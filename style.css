@@ -12,16 +12,19 @@ body {
 ===================== */
 
 .container {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     color: #FFD6E0;
-    padding: 40px 20px;
-    animation: fadeIn 1.5s ease forwards;
+    padding: 60px 20px 20px;
+    /* top plus léger */
+    animation: fadeIn 1.2s ease forwards;
 }
+
 
 h1 {
     font-size: 34px;
@@ -148,5 +151,72 @@ button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    animation: fadeDown 1.2s ease forwards;
+}
+
+h1 span {
+    display: block;
+    font-family: "Fleur De Leah", cursive;
+    font-size: 80px;
+    margin-top: 5px;
+    animation: float 3s ease-in-out infinite;
+}
+
+p {
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0;
+    margin: 25px 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.6s;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
     }
 }
