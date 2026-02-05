@@ -10,7 +10,6 @@ body {
 /* =====================
    PAGE PRINCIPALE
 ===================== */
-
 .container {
     height: 100vh;
     max-height: 100vh;
@@ -21,15 +20,17 @@ body {
     text-align: center;
     color: #FFD6E0;
     padding: 60px 20px 20px;
-    /* top plus léger */
     animation: fadeIn 1.2s ease forwards;
 }
 
-
+/* =====================
+   TITRES ET TEXTE
+===================== */
 h1 {
     font-size: 34px;
     margin-bottom: 10px;
     font-weight: 400;
+    animation: fadeDown 1.2s ease forwards;
 }
 
 h1 span {
@@ -37,6 +38,7 @@ h1 span {
     font-family: "Fleur De Leah", cursive;
     font-size: 80px;
     margin-top: 5px;
+    animation: float 3s ease-in-out infinite;
 }
 
 p {
@@ -45,22 +47,29 @@ p {
     line-height: 1.6;
     opacity: 0.9;
     margin: 25px 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.6s;
 }
 
 h2 {
     font-size: 26px;
     font-weight: 500;
     margin: 30px 0 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
 }
 
 /* =====================
    BOUTONS
 ===================== */
-
 .buttons {
     display: flex;
     gap: 30px;
     margin-top: 35px;
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 1.4s;
 }
 
 button {
@@ -69,9 +78,7 @@ button {
     border: none;
     border-radius: 999px;
     cursor: pointer;
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 button:hover {
@@ -93,7 +100,6 @@ button:hover {
 /* =====================
    GIF
 ===================== */
-
 #gifContainer {
     display: none;
     position: fixed;
@@ -107,6 +113,8 @@ button:hover {
 .gifContent {
     text-align: center;
     animation: fadeUp 1.2s ease forwards;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .gifContent img {
@@ -119,17 +127,19 @@ button:hover {
     max-width: 700px;
     font-size: 21px;
     line-height: 1.6;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 #backBtn {
     background-color: #ff8fab;
     color: #42373d;
+    margin-top: 20px;
 }
 
 /* =====================
    ANIMATIONS
 ===================== */
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -154,49 +164,6 @@ button:hover {
     }
 }
 
-h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    animation: fadeDown 1.2s ease forwards;
-}
-
-h1 span {
-    display: block;
-    font-family: "Fleur De Leah", cursive;
-    font-size: 80px;
-    margin-top: 5px;
-    animation: float 3s ease-in-out infinite;
-}
-
-p {
-    max-width: 520px;
-    font-size: 17px;
-    line-height: 1.6;
-    opacity: 0;
-    margin: 25px 0;
-    animation: fadeIn 1.5s ease forwards;
-    animation-delay: 0.6s;
-}
-
-h2 {
-    font-size: 26px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-    animation-delay: 1s;
-}
-
-.buttons {
-    display: flex;
-    gap: 30px;
-    margin-top: 35px;
-    opacity: 0;
-    animation: fadeUp 1.2s ease forwards;
-    animation-delay: 1.4s;
-}
-
 @keyframes fadeDown {
     from {
         opacity: 0;
@@ -218,5 +185,48 @@ h2 {
 
     50% {
         transform: translateY(-8px);
+    }
+}
+
+/* =====================
+   RESPONSIVE MOBILE
+===================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h1 span {
+        font-size: 56px;
+    }
+
+    p {
+        font-size: 15px;
+        margin: 18px 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    button {
+        width: 220px;
+        font-size: 16px;
+        padding: 14px 0;
+    }
+
+    .gifContent img {
+        width: 300px;
+    }
+
+    .gifText {
+        font-size: 16px;
+        padding: 0 20px;
     }
 }
