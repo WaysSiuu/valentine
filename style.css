@@ -1,6 +1,152 @@
-/* Site volontairement vide */
 html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    background-color: #42373d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =====================
+   PAGE PRINCIPALE
+===================== */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFD6E0;
+    padding: 40px 20px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+h1 span {
+    display: block;
+    font-family: "Fleur De Leah", cursive;
+    font-size: 80px;
+    margin-top: 5px;
+}
+
+p {
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+/* =====================
+   BOUTONS
+===================== */
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+button {
+    padding: 16px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.yes {
+    background-color: #ff8fab;
+    color: #42373d;
+    box-shadow: 0 8px 20px rgba(255, 143, 171, 0.35);
+}
+
+.no {
+    background-color: #6b5b63;
+    color: #FFD6E0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================
+   GIF
+===================== */
+
+#gifContainer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #42373d;
+    justify-content: center;
+    align-items: center;
+    color: #FFD6E0;
+}
+
+.gifContent {
+    text-align: center;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.gifContent img {
+    width: 500px;
+    max-width: 85%;
+}
+
+.gifText {
+    margin: 25px auto;
+    max-width: 700px;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+#backBtn {
+    background-color: #ff8fab;
+    color: #42373d;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
