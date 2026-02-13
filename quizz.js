@@ -1,35 +1,17 @@
 const questions = [
     {
         type: "four",
-        question: "Quand avons-nous commencé à nous parler ?",
+        question: "De quand date le premier appel ?",
         answers: [
-            { text: "2019", correct: false },
-            { text: "2020", correct: false },
-            { text: "2021", correct: true },
-            { text: "2022", correct: false }
+            { text: "25 février 2025", correct: true },
+            { text: "22 février 2025", correct: false },
+            { text: "21 février 2025", correct: false },
+            { text: "24 février 2025", correct: false }
         ]
     },
     {
         type: "two",
-        question: "Est-ce que je t’ai envoyé le premier message ?",
-        answers: [
-            { text: "OUI", correct: true },
-            { text: "NON", correct: false }
-        ]
-    },
-    {
-        type: "four",
-        question: "Notre premier voyage ensemble était où ?",
-        answers: [
-            { text: "Paris", correct: true },
-            { text: "Lyon", correct: false },
-            { text: "Nice", correct: false },
-            { text: "Marseille", correct: false }
-        ]
-    },
-    {
-        type: "two",
-        question: "On s’est rencontrés grâce à un ami ?",
+        question: "Notre premiere rencontre était au parc Clemenceau",
         answers: [
             { text: "OUI", correct: false },
             { text: "NON", correct: true }
@@ -37,19 +19,37 @@ const questions = [
     },
     {
         type: "four",
-        question: "Quel est notre plat préféré ensemble ?",
+        question: "Notre premiere bouffe ensemble ?",
         answers: [
-            { text: "Pizza", correct: true },
-            { text: "Sushi", correct: false },
-            { text: "Burger", correct: false },
-            { text: "Pâtes", correct: false }
+            { text: "Pepe Chicken", correct: false },
+            { text: "Tacos", correct: false },
+            { text: "Tracteur", correct: false },
+            { text: "Sushis", correct: true }
         ]
     },
     {
         type: "two",
-        question: "On a déjà regardé une série entière en un week-end ?",
+        question: "Le film qu'on a regardé a la défense était : A la poursuite du Pere Noel",
         answers: [
             { text: "OUI", correct: true },
+            { text: "NON", correct: false }
+        ]
+    },
+    {
+        type: "2",
+        question: "Ton tout premier cadeau était Alex ?",
+        answers: [
+            { text: "OUI", correct: true },
+            { text: "NON", correct: false }
+        ]
+    },
+    {
+        type: "four",
+        question: "As-tu déja dit cette phrase ?",
+        answers: [
+            { text: "OUI", correct: true },
+            { text: "NON", correct: false },
+            { text: "OUI", correct: false },
             { text: "NON", correct: false }
         ]
     }

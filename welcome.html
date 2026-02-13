@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e6e6e6;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(14px);
+            padding: 60px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #dea2f0, #c796d1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            background: #b124d4;
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Bienvenue au Quizz</h1>
+        <p>Prêt(e) à tester vos souvenirs ?</p>
+        <button onclick="startQuiz()">Commencer le quizz</button>
+    </div>
+
+    <script>
+        function startQuiz() {
+            window.location.href = "quizz.html";
+        }
+    </script>
+
+</body>
+
+</html>
