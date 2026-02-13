@@ -45,12 +45,12 @@ const questions = [
     },
     {
         type: "four",
-        question: "As-tu déja dit cette phrase ?",
+        question: "Quelle phrase je n'ai PAS dit ?",
         answers: [
-            { text: "OUI", correct: true },
-            { text: "NON", correct: false },
-            { text: "OUI", correct: false },
-            { text: "NON", correct: false }
+            { text: "Jvais slay la place wouldi", correct: false },
+            { text: "Je suis un poussin tfacon", correct: true },
+            { text: "50/50 c'est honnête de bz nous fait pas la michto stp", correct: false },
+            { text: "Vasy envoi tes pieds pour prouver que tes folle", correct: false }
         ]
     }
 ];
